@@ -8,20 +8,21 @@
 
 body {
   /* border: 1px solid black; */
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
+  right: 0; */
+  padding: 5em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1200px) {
   body {
     position: relative;
-    /* padding: 3rem 0; */
+    padding: 3rem 0;
   }
 }
 @media screen and (max-width: 750px) {
@@ -32,9 +33,14 @@ body {
 
 .pattern-top {
   background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
-  background-position: 0% 0%, bottom right;
-  background-attachment: fixed;
+  background-position: top left, right bottom;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 920px) {
+  .pattern-top {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, right bottom;
+  }
 }
 
 main {
@@ -135,6 +141,7 @@ main {
   /* border: 1px solid lightslategray; */
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
 }
 .box-2 img {
   border-radius: 50%;
@@ -176,7 +183,7 @@ main {
 .box-2 .card-1 span, .box-2 .card-2 span, .box-2 .card-3 span {
   color: hsl(333, 80%, 67%);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 920px) {
   .box-1 .sub-box, .box-1 .sub-box h2, .box-1 .sub-box p {
     text-align: center;
   }
@@ -209,11 +216,11 @@ main {
     width: 100%;
   }
 }
-/* 
+
 footer {
-  border: 1px solid lightseagreen;
-  margin-top: 20px;
-} */
+  /* border: 1px solid lightseagreen; */
+  margin-bottom: 10px;
+}
 footer .attribution {
   font-size: 11px;
   text-align: center;
